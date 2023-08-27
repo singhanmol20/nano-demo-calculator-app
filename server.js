@@ -9,12 +9,12 @@ app.use(express.json());
 
 const baseRouter = express.Router();
 
-baseRouter.get('/',(req,res)=>{
-    return res.send("<html><body>hi</body></html>")
-})
+// baseRouter.get('/',(req,res)=>{
+//     return res.send("<html><body>hi</body></html>")
+// })
 
 baseRouter.get('/greeting', (req, res) => {
-    return res.send(req.body);
+    return res.send('Hello World!');
 });
 
 baseRouter.post('/add', (req, res) => {
