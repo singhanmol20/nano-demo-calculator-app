@@ -9,12 +9,16 @@ app.use(express.json());
 
 const baseRouter = express.Router();
 
+baseRouter.get('/',(req,res)=>{
+    return res.send("<html><body>hi</body></html>")
+})
+
 baseRouter.get('/greeting', (req, res) => {
-    return res.send('');
+    return res.send(req.body);
 });
 
 baseRouter.post('/add', (req, res) => {
-    res.json({ "": null });
+    res.json({ "result": req.body.first + req.body.second });
 });
 
 
